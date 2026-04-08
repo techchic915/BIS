@@ -3,7 +3,7 @@
 A multi-page Power BI dashboard analyzing global debt securities data sourced from the Bank for International Settlements (BIS). This project covers over six decades of debt trends across 152 countries, examining regional distribution, growth rates, crisis periods, and market structure.
 
 # Dashboard Pages
-
+**************************************************************************************
 # Page 1 — Global Debt Overview
 High-level summary of total global debt securities, country and regional distribution, and debt trends by decade. Key visuals include a decade trend line chart, top countries by total debt, regional donut chart, and debt by growth regime.
 
