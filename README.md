@@ -11,6 +11,7 @@ CSV → SQLite Database → Power BI Desktop → OneDrive → Power BI Service (
 # SQL Queries
 **************************************************************************************
 Four analytical queries were written against the SQLite database to support dashboard insights:
+
 Query 1 — Debt by Country and Decade
 Aggregates total debt and average YoY growth grouped by country and decade, ordered by total debt descending.
 
