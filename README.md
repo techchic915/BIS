@@ -1,6 +1,24 @@
 # BIS Global Debt Securities Dashboard (1962–2025)
 
-A multi-page Power BI dashboard analyzing global debt securities data sourced from the Bank for International Settlements (BIS). This project covers over six decades of debt trends across 152 countries, examining regional distribution, growth rates, crisis periods, and market structure.
+A multi-page Power BI dashboard analyzing global debt securities data sourced from the Bank for International Settlements (BIS). This project covers over six decades of debt trends across 152 countries, examining regional distribution, growth rates, crisis periods, and market structure. Data is sourced through a SQLite pipeline and connected to Power BI Service with daily auto-refresh via OneDrive.
+
+# Data Pipeline
+
+Raw CSV data was loaded into a SQLite database using DB Browser for SQLite. SQL queries were written to analyze debt trends, growth regimes, all-time highs, and crisis period comparisons before connecting to Power BI Desktop for visualization.
+Pipeline flow:
+CSV → SQLite Database → Power BI Desktop → OneDrive → Power BI Service (Auto-refresh daily)
+
+# SQL Queries
+**************************************************************************************
+Four analytical queries were written against the SQLite database to support dashboard insights:
+Query 1 — Debt by Country and Decade
+Aggregates total debt and average YoY growth grouped by country and decade, ordered by total debt descending.
+Query 2 — Growth Regime Analysis
+Groups records by growth regime to compare average YoY and QoQ growth rates and total record counts across market conditions.
+Query 3 — All-Time Highs by Country
+Filters records where is_all_time_high = 1 and returns the top 10 countries by ATH count with average debt in billions. Excludes aggregate groupings and NULL regions.
+Query 4 — Crisis Period Comparison (CASE Statement)
+Uses a CASE statement to classify records into During GFC, During COVID, and Normal Period categories, then compares average growth rates and debt levels across each period.
 
 # Dashboard Pages
 **************************************************************************************
